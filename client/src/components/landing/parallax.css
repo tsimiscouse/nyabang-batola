@@ -1,0 +1,115 @@
+/* Parallax Background Layers */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+}
+
+.parallax-bg-1 {
+  background-image: url('/images/hero-bg-layer-1.jpg'); /* Sky/clouds background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.3;
+}
+
+.parallax-bg-2 {
+  background-image: url('/images/hero-bg-layer-2.png'); /* River and landscape */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.6;
+}
+
+.parallax-bg-3 {
+  background-image: url('/images/hero-bg-layer-3.png'); /* Foreground elements like palm trees */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
+/* Smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glassmorphism effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Custom gradient backgrounds */
+.gradient-teal {
+  background: linear-gradient(135deg, #0f766e 0%, #134e4a 50%, #065f46 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .parallax-bg-1,
+  .parallax-bg-2,
+  .parallax-bg-3 {
+    background-attachment: scroll;
+  }
+}
+
+/* Loading animation for images */
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Scroll indicator styles */
+.scroll-indicator {
+  position: relative;
+}
+
+.scroll-indicator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 20px;
+  background: white;
+  border-radius: 2px;
+  animation: scroll-bounce 2s infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+  }
+}

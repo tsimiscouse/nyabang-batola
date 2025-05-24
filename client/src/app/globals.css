@@ -4,6 +4,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
+:root {
+  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
+  --font-dm-serif-display: var(--font-dm-serif-display);
+  --primary-900: #1a3c31; 
+  --primary-800: #2a5b48; 
+  --primary-700: #3b7a5e;
+  --white: #ffffff;
+  --gray-300: #d1d5db;
+  --gray-700: #374151;
+}
+
+html {
+  font-family: var(--font-plus-jakarta-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-dm-serif-display);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
