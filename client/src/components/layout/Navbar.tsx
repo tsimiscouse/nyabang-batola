@@ -61,15 +61,15 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/profil"
-                className="hover:text-gray-200 transition-colors duration-200"
+                href="Profil"
+                className="hover:text-gra/y-200 transition-colors duration-200"
               >
                 Profil
               </Link>
             </li>
             <li>
               <Link
-                href="/publikasi"
+                href="/Publikasi"
                 className="hover:text-gray-200 transition-colors duration-200"
               >
                 Publikasi
@@ -77,7 +77,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/tim"
+                href="/Tim"
                 className="hover:text-gray-200 transition-colors duration-200"
               >
                 Tim
@@ -85,7 +85,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/peta"
+                href="/Peta"
                 className="hover:text-gray-200 transition-colors duration-200"
               >
                 Peta
@@ -93,7 +93,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/layanan-desa"
+                href="/LayananDesa"
                 className="hover:text-gray-200 transition-colors duration-200"
               >
                 Layanan Desa
