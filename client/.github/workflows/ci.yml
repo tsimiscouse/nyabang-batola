@@ -1,4 +1,4 @@
-name: CI
+name: Client CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build-and-test:
+  build-client:
     runs-on: ubuntu-latest
 
     defaults:
@@ -15,21 +15,24 @@ jobs:
         working-directory: client
 
     steps:
-      - name: Checkout Repository
+      - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: "npm"
           cache-dependency-path: client/package-lock.json
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm install
 
-      - name: Run Lint
+      - name: 🔍 Lint
         run: npm run lint
 
-      - name: Build Project
+      - name: 🧪 Test
+        run: npm run test
+
+      - name: 🛠️ Build
         run: npm run build
