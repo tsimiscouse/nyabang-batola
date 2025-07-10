@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'upxxoqbrqccuyhffmxvm.supabase.co', 'lh3.googleusercontent.com'],
     formats: ['image/webp', 'image/avif'],
   },
   swcMinify: true,
